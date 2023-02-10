@@ -13,16 +13,35 @@ npm install --save mx-scrollbar
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React from 'react'
+import { MxScrollbar } from 'mx-scrollbar'
 
-import MyComponent from 'mx-scrollbar'
-import 'mx-scrollbar/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%'
+      }}
+    >
+      <MxScrollbar>
+        <div
+          style={{
+            overflow: 'scroll',
+            height: '900px'
+          }}
+        >
+          <div style={{ height: '3500px' }} />
+        </div>
+      </MxScrollbar>
+    </div>
+  )
 }
+
+export default App
+
 ```
 
 ## License
