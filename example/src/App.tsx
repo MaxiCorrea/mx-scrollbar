@@ -1,10 +1,28 @@
 import React from 'react'
-
-import { ExampleComponent } from 'mx-scrollbar'
-import 'mx-scrollbar/dist/index.css'
+import { MxScrollbar } from 'mx-scrollbar'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%'
+      }}
+    >
+      <MxScrollbar>
+        <div
+          style={{
+            overflow: 'scroll',
+            height: '900px'
+          }}
+        >
+          <div style={{ height: '3500px' }} />
+        </div>
+      </MxScrollbar>
+    </div>
+  )
 }
 
 export default App
